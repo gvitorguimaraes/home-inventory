@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #333;
+  --gradient-primary: linear-gradient(45deg, #E93029 5%, #FCC40E 100%);
+  --gradient-secondary: linear-gradient(45deg, #ca2a24 5%, #e2b31a 100%);
+  
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container
+{
+    
+}
+
+.items-center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

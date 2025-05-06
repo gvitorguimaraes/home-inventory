@@ -1,0 +1,13 @@
+#botao-hero-container
+{
+    padding-top: 2%;
+}
+
+#button
+{
+	background:var(--gradient-primary);
+	background-color:var(--primary-color);
+	color:#ffffff;
+	font-size:22px;
+	padding:26px 70px;
+}
