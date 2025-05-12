@@ -1,4 +1,10 @@
 
+@media (max-width: 768px) {
+    #name-topbar {
+      display: none;
+    }
+}
+
 #topbar
 {
     background-color: whitesmoke;
@@ -25,4 +31,14 @@
 	background-color:var(--primary-color);
 	color:#ffffff;
 	padding:1px 25px;
+}
+
+.divisorTopbar
+{
+    padding: 1px;
+    background-color: var(--primary-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

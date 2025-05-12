@@ -1,0 +1,96 @@
+<h2 mat-dialog-title>{{data.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="img-dialog-container">
+    <img class="img-dialog" src="assets/logo.png" alt="Card Image" />
+  </div>
+
+  <form class="form-dialog">
+    <mat-form-field class="input-full-width">
+
+      <mat-label>item name</mat-label>
+      <input  
+        matInput 
+        [(ngModel)]="data.name" 
+        name="itemName" 
+        placeholder="item name"
+        [disabled]="!editMode"
+      >
+
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+
+      <mat-label>description</mat-label>
+      <textarea  
+        matInput 
+        [(ngModel)]="data.description" 
+        name="description" 
+        placeholder="description"
+        [disabled]="!editMode"
+      ></textarea>
+
+    </mat-form-field>
+
+    <table class="input-full-width" cellspacing="0"><tr>
+      <td>
+        <mat-form-field>
+
+          <mat-label>amount</mat-label>
+          <input 
+            matInput 
+            [(ngModel)]="data.amount" 
+            name="amount" 
+            placeholder="amount"
+            [disabled]="!editMode"
+          >
+
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+
+          <mat-label>category</mat-label>
+          <mat-select 
+            [(ngModel)]="data.category" 
+            name="category"
+            [disabled]="!editMode"
+          >
+            @for (category of categoryOptions; track category) {
+              <mat-option [value]="category"> {{ category }} </mat-option>
+            }
+          </mat-select>
+
+        </mat-form-field>
+      </td>
+    </tr></table>
+
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+
+  <button 
+    mat-button 
+    mat-dialog-close 
+    (click)="onNoClick()"
+  >
+    cancel
+  </button>
+
+  <button 
+    mat-button 
+    *ngIf="!editMode" 
+    (click)="changeToEdit()"
+  >
+    edit
+  </button>
+
+  <button 
+    mat-button 
+    *ngIf="editMode" 
+    [mat-dialog-close]="true" 
+    (click)="saveItem()" 
+    cdkFocusInitial
+  >
+    save
+  </button>
+
+</mat-dialog-actions>

@@ -1,0 +1,17 @@
+<div class="card" (click)="showDetailModal()">
+    <div class="grid-container">
+      <div class="img">
+        <img src="assets/logo.png" alt="Card Image" />
+      </div>
+      <div class="content">
+        <h3>{{item.name}}</h3>
+        <p>{{item.description}}</p>
+      </div>
+      <div class="actions">
+        <span style="display: flex; align-items: center;">x {{item.amount}}</span>
+        <button mat-icon-button aria-label="delete">
+            <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>

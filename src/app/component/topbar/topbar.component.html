@@ -2,12 +2,22 @@
     <img id="logo-topbar" src="assets/logo.png" alt="logo">
     <span id="name-topbar">home inventory</span>
     <span class="spacer"></span>
+
     <button mat-raised-button 
         id="import-button" 
         *ngIf="showImportButton"
         (click)="importDataZip()"
         >
-        <mat-icon>publish</mat-icon>
+        <mat-icon>download</mat-icon>
+        export
+    </button>
+    <div class="divisorTopbar"></div>
+    <button mat-raised-button 
+        id="import-button" 
+        *ngIf="showImportButton"
+        (click)="importDataZip()"
+        >
+        <mat-icon>upload</mat-icon>
         import
     </button>
 </mat-toolbar>

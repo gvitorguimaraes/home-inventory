@@ -1,0 +1,46 @@
+.card {
+    margin-top: 20px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 600px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+  @media (max-width: 768px) {
+    .card {
+      width: 90%; /* tamanho Y para celular */
+    }
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .img {
+    grid-column: span 3;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+  
+  .content {
+    grid-column: span 6;
+  }
+  
+  .actions {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
